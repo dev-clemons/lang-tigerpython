@@ -50,7 +50,7 @@ function indentBody(context: TreeIndentContext, node: SyntaxNode) {
 /// A language provider based on the [Lezer Python
 /// parser](https://github.com/lezer-parser/python), extended with
 /// highlighting and indentation information.
-export const pythonLanguage = LRLanguage.define({
+export const tigerPythonLanguage = LRLanguage.define({
   name: "python",
   parser: parser.configure({
     props: [
@@ -105,9 +105,9 @@ export const pythonLanguage = LRLanguage.define({
 })
 
 /// Python language support.
-export function python() {
-  return new LanguageSupport(pythonLanguage, [
-    pythonLanguage.data.of({autocomplete: localCompletionSource}),
-    pythonLanguage.data.of({autocomplete: globalCompletion}),
+export function tigerPython() {
+  return new LanguageSupport(tigerPythonLanguage, [
+    tigerPythonLanguage.data.of({autocomplete: localCompletionSource}),
+    tigerPythonLanguage.data.of({autocomplete: globalCompletion}),
   ])
 }
