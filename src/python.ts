@@ -1,4 +1,4 @@
-import {parser} from "@lezer/python"
+import {parser} from "../lezer-tigerpython/dist/index.js"
 import {SyntaxNode} from "@lezer/common"
 import {delimitedIndent, indentNodeProp, TreeIndentContext, 
         foldNodeProp, foldInside, LRLanguage, LanguageSupport} from "@codemirror/language"
@@ -90,6 +90,7 @@ export const pythonLanguage = LRLanguage.define({
         "String FormatString": (node, state) => ({from: state.doc.lineAt(node.from).to, to: node.to})
       })
     ],
+    dialect: "TigerPython",
   }),
   languageData: {
     closeBrackets: {
