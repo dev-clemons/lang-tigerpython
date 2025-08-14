@@ -1,4 +1,4 @@
-import {parser} from "../lezer-tigerpython/dist/index.js"
+import {parser} from "../lezer-tigerpython/dist/index"
 import {SyntaxNode} from "@lezer/common"
 import {delimitedIndent, indentNodeProp, TreeIndentContext, 
         foldNodeProp, foldInside, LRLanguage, LanguageSupport} from "@codemirror/language"
