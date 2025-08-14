@@ -90,7 +90,6 @@ export const tigerPythonLanguage = LRLanguage.define({
         "String FormatString": (node, state) => ({from: state.doc.lineAt(node.from).to, to: node.to})
       })
     ],
-    dialect: "TigerPython",
   }),
   languageData: {
     closeBrackets: {
